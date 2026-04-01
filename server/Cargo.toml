@@ -3,13 +3,17 @@ name = "video-streaming"
 version = "0.1.0"
 edition = "2021"
 
+[lib]
+name = "video_streaming"
+path = "src/lib.rs"
+
 [[bin]]
 name = "api-server"
-path = "src/main.rs"
+path = "src/bin/api_server.rs"
 
 [[bin]]
 name = "transcode-worker"
-path = "src/worker/main.rs"
+path = "src/bin/transcode_worker.rs"
 
 [dependencies]
 axum = { version = "0.8", features = ["multipart"] }

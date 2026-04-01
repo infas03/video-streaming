@@ -1,17 +1,12 @@
-mod config;
-mod db;
-mod error;
-mod handlers;
-mod models;
-mod state;
-mod storage;
-
 use axum::Router;
-use config::AppConfig;
-use state::AppState;
 use tower_http::cors::CorsLayer;
 use tower_http::trace::TraceLayer;
 use tracing_subscriber::EnvFilter;
+use video_streaming::config::AppConfig;
+use video_streaming::db;
+use video_streaming::handlers;
+use video_streaming::state::AppState;
+use video_streaming::storage;
 
 #[tokio::main]
 async fn main() {
