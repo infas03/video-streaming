@@ -1,5 +1,7 @@
 # Video Streaming Service
 
+Repository: https://github.com/infas03/video-streaming.git
+
 A private video streaming service built with Rust and SvelteKit. Videos are playable immediately after upload through HTTP range requests, while HLS transcoding happens in the background.
 
 ## How It Works
