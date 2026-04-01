@@ -18,6 +18,7 @@ pub fn create_s3_client(config: &AppConfig) -> aws_sdk_s3::Client {
     );
 
     let s3_config = aws_sdk_s3::Config::builder()
+        .behavior_version_latest()
         .endpoint_url(&config.s3_endpoint)
         .region(Region::new(config.s3_region.clone()))
         .credentials_provider(credentials)

@@ -4,9 +4,8 @@ use std::path::PathBuf;
 use uuid::Uuid;
 
 use crate::config::AppConfig;
-use crate::db;
 use crate::db::video::{
-    find_video_by_token, set_video_hls_ready, update_transcode_job_status, update_video_status,
+    set_video_hls_ready, update_transcode_job_status, update_video_status,
 };
 use crate::error::AppError;
 use crate::storage;

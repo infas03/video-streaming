@@ -26,7 +26,7 @@ pub async fn handle_upload(
     State(state): State<AppState>,
     mut multipart: Multipart,
 ) -> Result<Json<UploadResponse>, AppError> {
-    let field = multipart
+    let mut field = multipart
         .next_field()
         .await
         .map_err(|e| AppError::BadRequest(e.to_string()))?
